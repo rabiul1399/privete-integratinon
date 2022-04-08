@@ -22,8 +22,10 @@ const useFirebase = () =>{
        })
     }
     const handleSignOut = () =>{
-        signOut(auth)
-        .than(() =>{})
+        signOut(auth).then(() => {
+            // Sign-out successful.
+          })
+       
     }
      
     useEffect(() =>{
