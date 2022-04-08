@@ -3,6 +3,12 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import app from './firebase.inti';
+import { getAuth } from "firebase/auth";
+
+
+const auth = getAuth(app);
 
 function App() {
   return (
@@ -11,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
      
     </div>
